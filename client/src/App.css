@@ -1,0 +1,9 @@
+.main-wrapper{
+    display: flex;
+    width: 500vw;
+    transition: 1s;
+}
+
+.wrapper{
+    width: 100vw;
+}

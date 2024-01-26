@@ -1,15 +1,33 @@
 import { useState } from 'react'
 import './App.css'
 import Home from './components/Home.Jsx'
+import Navbar from './components/Navbar'
+import Shop from './components/Shop'
+import Sale from './components/Sale'
+import Login from './components/Login'
+import Cart from './components/Cart'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [index, setIndex] = useState(0)
+
+  const changeSection = (e,i) => {
+    e.preventDefault()
+    setIndex(i)
+  }
 
   return (
     <>
-    <Home />
-    <h1>22</h1>
-
+    <Navbar changeSection={changeSection} />
+    <div 
+    className="main-wrapper" 
+    style={{transform: `translateX(${-100 * index}vw)`}}
+    >
+      <Home />
+      <Shop />
+      <Sale />
+      <Login />
+      <Cart />
+    </div>
     </>
   )
 }
