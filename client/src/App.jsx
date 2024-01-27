@@ -12,6 +12,7 @@ function App() {
 
   const changeSection = (e,i) => {
     e.preventDefault()
+    if (i==9) return
     setIndex(i)
   }
 
@@ -27,6 +28,7 @@ function App() {
       <Sale />
       <Login />
       <Cart />
+
     </div>
     </>
   )

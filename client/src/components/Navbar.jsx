@@ -1,24 +1,36 @@
+import { useEffect, useState } from 'react';
 import '../style/navbar.css'
 
 function Navbar({changeSection}){
+
+    const [isNavClicked, setIsNavClicked] = useState(false)
 
 
     const navItems = [
         {
             itemName:"HOME",
-            link:"home"
+            link:"home",
+            id:0
+        },
+        {
+            itemName:"FEATURED",
+            link:"#featured",
+            id:9
         },
         {
             itemName:"SHOP",
-            link:"shop"
+            link:"shop",
+            id:1
         },
         {
             itemName:"SALE",
-            link:"sale"
+            link:"sale",
+            id:2
         },
         {
             itemName:"LOGIN",
-            link:"login"
+            link:"login",
+            id:3
         },
     ]
 
@@ -30,7 +42,7 @@ function Navbar({changeSection}){
         <>
         <nav>
             <h1 className="logo">
-                E-Marlt
+                E-Mart
             </h1>
 
             <div className="nav-icons">
@@ -41,15 +53,22 @@ function Navbar({changeSection}){
                         <a 
                             href={item.link} 
                             key={index} 
-                            onClick={(e) => changeSection(e,index)} 
+                            onClick={(e) => {
+                                setIsNavClicked(false)   
+                                return changeSection(e,item.id)
+                            }} 
                             >{item.itemName}</a>
                     </div>
-                    )
-                )}
+                    ))
+                }
   
                 </ul>
 
-                <span class="material-symbols-outlined menu">menu</span>
+                <span 
+                class="material-symbols-outlined menu"
+                onClick={()=>setIsNavClicked(!isNavClicked)}
+                >menu</span>
+
                 <a 
                 class="material-symbols-outlined" 
                 style={{textDecoration:"none",color:"#212F3C"}} 
@@ -57,6 +76,30 @@ function Navbar({changeSection}){
                 href="#cart">local_mall</a>
             </div>
         </nav>
+
+        <div className="r-nav" style={
+            {
+                left: isNavClicked ? '0px' : '-300px'
+            }
+            }>
+            { navItems.map((item,index)=> (
+                
+                <a
+                className='r-nav-item' 
+                href={item.link} 
+                key={index} 
+                onClick={(e) => {
+                    setIsNavClicked(false)   
+                    return changeSection(e,item.id)
+                }} 
+                >{item.itemName}
+                </a>
+        
+            ))
+            }
+
+            <h1>E-Mart</h1>
+        </div>
         </>
     )
 }

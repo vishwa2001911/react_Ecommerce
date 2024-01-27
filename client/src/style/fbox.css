@@ -1,0 +1,61 @@
+.sale-tag{
+    padding: 5px;
+    width: 54px;
+    font-size: 17px;
+    font-weight: normal;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color:#212F3C;
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 30px;
+    left: -5px;
+}
+
+
+.f-box{
+    width: 300px;
+    height: 370px;
+    margin-top: 30px;
+    border: none;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.f-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0;
+    position: relative;
+    transition: 0.4s;
+    -webkit-box-shadow: 6px 6px 5px -1px rgba(0,0,0,0.11);
+    -moz-box-shadow: 6px 6px 5px -1px rgba(0,0,0,0.11);
+    box-shadow: 6px 6px 5px -1px rgba(0,0,0,0.11);
+}
+
+.f-box:hover{
+    -webkit-box-shadow: 6px 6px 7px -1px rgba(0,0,0,0.52);
+    -moz-box-shadow: 6px 6px 7px -1px rgba(0,0,0,0.52);
+    box-shadow: 6px 6px 7px -1px rgba(0,0,0,0.52);
+}
+
+.f-box img{
+    width: 80%;
+    -webkit-transform: scaleX(-1)
+
+}
+
+.f-box h6{
+    cursor: pointer;
+}
+
+.f-box h6:hover{
+    color: gray;
+}
+
+.f-box h1,.f-box h5,.f-box h6{
+    margin: 0;
+}
