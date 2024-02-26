@@ -77,6 +77,10 @@ main{
     flex-direction: column;
 }
 
+.btn-group-vertical{
+    display: none;
+}
+
 .f-wrapper h1{
     font-size: 40px;
     margin-top: 10px;

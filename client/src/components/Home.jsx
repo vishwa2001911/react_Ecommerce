@@ -1,6 +1,7 @@
 import '../style/home.css'
 import '../style/fbox.css'
 import Fbox from './Fbox';
+import Feature from './Feature';
 
 function Home(){
 
@@ -58,14 +59,8 @@ function Home(){
                     alt="air" />
                 </div>
             </main>
-            <div className="f-wrapper" id='featured'>
-                <span></span>
-                <h1>FEATURED</h1>
-                
-                <dev className="f-box-wrapper">
-                    { products.map(i=><Fbox image={i.colors.img} name={i.title} price={i.price} id={i.id} />) }
-                </dev>
-            </div>
+
+            <Feature />
         </div>
         </>
     )

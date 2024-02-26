@@ -4,6 +4,7 @@ import '../style/navbar.css'
 function Navbar({changeSection}){
 
     const [isNavClicked, setIsNavClicked] = useState(false)
+    let [featured, isFeaturedClicked] =  useState("Home")
 
 
     const navItems = [
@@ -11,11 +12,6 @@ function Navbar({changeSection}){
             itemName:"HOME",
             link:"home",
             id:0
-        },
-        {
-            itemName:"FEATURED",
-            link:"#featured",
-            id:9
         },
         {
             itemName:"SHOP",
@@ -33,6 +29,10 @@ function Navbar({changeSection}){
             id:3
         },
     ]
+
+    const change = () =>{
+
+    }
 
 
 
@@ -54,14 +54,16 @@ function Navbar({changeSection}){
                             href={item.link} 
                             key={index} 
                             onClick={(e) => {
+                            
+                                isFeaturedClicked(item.itemName)
                                 setIsNavClicked(false)   
                                 return changeSection(e,item.id)
                             }} 
-                            >{item.itemName}</a>
+                        >{item.itemName}</a>
                     </div>
                     ))
                 }
-  
+                
                 </ul>
 
                 <span 
@@ -100,6 +102,27 @@ function Navbar({changeSection}){
 
             <h1>E-Mart</h1>
         </div>
+        <div class="btn-group-vertical" role="group" aria-label="qq">
+            <button type="button" class="btn btn-secondary">First One</button>
+            <button type="button" class="btn btn-secondary">Second One</button>
+            <div class="btn-group" role="group">
+                <button
+                    id="dropdownId"
+                    type="button"
+                    class="btn btn-secondary dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                >
+                    More
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" href="#">First Dropdown</a>
+                    <a class="dropdown-item" href="#">Second Dropdown</a>
+                </div>
+            </div>
+        </div>
+        
         </>
     )
 }
