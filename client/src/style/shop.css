@@ -31,6 +31,8 @@
 
 .shop-main img{
     width:60%;
+    filter: drop-shadow(7px 7px 7px #666666);
+    -webkit-filter: drop-shadow(7px 7px 7px #666666);
 }
 
 .shop-menu{
@@ -89,3 +91,4 @@
     justify-items: center;
     gap: 20px;
 }
+

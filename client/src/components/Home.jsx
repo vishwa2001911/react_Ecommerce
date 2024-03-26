@@ -2,6 +2,9 @@ import '../style/home.css'
 import '../style/fbox.css'
 import Fbox from './Fbox';
 import Feature from './Feature';
+import Cont from './Cont';
+import Footer from './Footer';
+//import { connect } from './contact.jsx';
 
 function Home(){
 

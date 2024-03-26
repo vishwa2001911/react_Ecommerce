@@ -44,8 +44,26 @@
 
 .f-box img{
     width: 80%;
-    -webkit-transform: scaleX(-1)
+    -webkit-transform: scaleX(-1);
+    filter: drop-shadow(7px 7px 7px #666666);
+    -webkit-filter: drop-shadow(1px 8px 11px #666666);
 
+}
+
+.sale-price{
+    
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+    background-color: #212F3C;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
 }
 
 .f-box h6{

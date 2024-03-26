@@ -23,11 +23,6 @@ function Navbar({changeSection}){
             link:"sale",
             id:2
         },
-        {
-            itemName:"LOGIN",
-            link:"login",
-            id:3
-        },
     ]
 
     const change = () =>{
@@ -74,7 +69,7 @@ function Navbar({changeSection}){
                 <a 
                 class="material-symbols-outlined" 
                 style={{textDecoration:"none",color:"#212F3C"}} 
-                onClick={(e) => changeSection(e,4)} 
+                onClick={(e) => changeSection(e,3)} 
                 href="#cart">local_mall</a>
             </div>
         </nav>

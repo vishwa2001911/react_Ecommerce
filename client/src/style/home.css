@@ -1,6 +1,15 @@
+#home{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+}
+
+
 main{
     display: grid;
     grid-template-columns: 45% 55%;
+    background-color: whitesmoke;
 }
 
 .m-box{
@@ -55,6 +64,8 @@ main{
     border-radius: 50%;
     background-color: black;
     position: absolute;
+    filter: drop-shadow(7px 7px 7px #666666);
+    -webkit-filter: drop-shadow(7px 7px 7px #666666);
 }
 
 .m-box1{
@@ -99,6 +110,63 @@ main{
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+}
+
+
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding-bottom: 50px;
+}
+
+
+.contact-main{
+    width: 90vw;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.contact-main h1{
+    color: white;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.sub-box{
+    width: 320px;
+    height: 70px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.sub-email{
+    width: 130px;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    outline: none;    
+}
+
+.sub-btn{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
 }
 
 
